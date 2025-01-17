@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "This Renovate preset is for Go projects. It enables the 'gomod' manager and runs 'gomodMassage' and 'gomodTidy' after updates. It extends the 'group:all' preset for broader update grouping and adds custom grouping not included in the 'group:all' preset",
+  "extends": [
+    ":gomod",
+    "group:goOpenapi",
+    "group:kubernetes",
+    "group:pulumi"
+  ],
+  "postUpdateOptions": ["gomodMassage", "gomodTidy"],
+  "packageRules": [
+    {
+      "groupName": "google.golang.org/genproto/googleapis/*",
+      "groupSlug": "genproto-googleapis",
+      "matchDatasources": ["go"],
+      "matchPackageNames": ["google.golang.org/genproto/googleapis/**"]
+    }
+  ]
+}
