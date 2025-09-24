@@ -2,16 +2,16 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": [
     " [DEPRECATED] Compatibility preset kept for repositories that still extend",
-    " 'Kong/public-shared-renovate:kong-frontend-config'. It now builds on the org",
+    " 'bartsmykla/public-shared-renovate:kong-frontend-config'. It now builds on the org",
     " default preset and layers a few adjustments so behavior remains close to the",
     " historical frontend config (timezone, cadence, minor/patch automerge, select",
     " action disables, and a GitHub Actions grouping rule). Prefer migrating to",
     " the default preset plus local overrides; see PR note for details"
   ],
   "extends": [
-    "Kong/public-shared-renovate",
-    "Kong/public-shared-renovate//helpers/disable-action(Kong/kong-api-tests)",
-    "Kong/public-shared-renovate//helpers/disable-action(the-actions-org/workflow-dispatch)",
+    "bartsmykla/public-shared-renovate",
+    "bartsmykla/public-shared-renovate//helpers/disable-action(Kong/kong-api-tests)",
+    "bartsmykla/public-shared-renovate//helpers/disable-action(the-actions-org/workflow-dispatch)",
     "config:recommended",
     "schedule:automergeWeekdays",
     "schedule:daily",

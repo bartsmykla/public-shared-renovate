@@ -7,12 +7,12 @@
     " labels preset always include the standard 'dependencies' and 'mend-bot' labels"
   ],
   "vulnerabilityAlerts": {
-    "extends": ["Kong/public-shared-renovate//overrides/labels({{{args}}})"]
+    "extends": ["bartsmykla/public-shared-renovate//overrides/labels({{{args}}})"]
   },
   "packageRules": [
     {
       "matchPackageNames": ["*/public-shared-actions/security-actions/**"],
-      "extends": ["Kong/public-shared-renovate//overrides/labels({{{args}}})"]
+      "extends": ["bartsmykla/public-shared-renovate//overrides/labels({{{args}}})"]
     }
   ]
 }

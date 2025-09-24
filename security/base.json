@@ -14,8 +14,8 @@
   ],
   "extends": [
     "security:openssf-scorecard",
-    "Kong/public-shared-renovate//overrides/security-labels(security)",
-    "Kong/public-shared-renovate//security/_incidents"
+    "bartsmykla/public-shared-renovate//overrides/security-labels(security)",
+    "bartsmykla/public-shared-renovate//security/_incidents"
   ],
   "osvVulnerabilityAlerts": true,
   "vulnerabilityAlerts": {
@@ -30,7 +30,7 @@
   "packageRules": [
     {
       "matchPackageNames": ["*/public-shared-actions/security-actions/**"],
-      "extends": ["Kong/public-shared-renovate//helpers/immediately"]
+      "extends": ["bartsmykla/public-shared-renovate//helpers/immediately"]
     }
   ]
 }

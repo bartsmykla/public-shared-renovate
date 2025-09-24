@@ -9,7 +9,7 @@
   "extends": [
     "group:githubArtifactActions",
     "helpers:pinGitHubActionDigestsToSemver",
-    "Kong/public-shared-renovate//security/incidents/github-actions/tj-actions-changed-files"
+    "bartsmykla/public-shared-renovate//security/incidents/github-actions/tj-actions-changed-files"
   ],
   "customManagers": [
     {
@@ -83,7 +83,7 @@
       "matchPackageNames": ["*/public-shared-actions{,/}**"],
       "matchRepositories": ["!/^[0-9A-z.-]*(?:Kong|kumahq)[0-9A-z.-]*\\/.*$/i"],
       "prBodyNotes": [
-        "---\n> [!NOTE]\n> #### Heads-up for repos named \"public-shared-actions\"\n>\n> This preset matches any action path like `*/public-shared-actions/**` and treats it like the Kong/public-shared-actions monorepo (assumes nested sub-actions and a specific tag format). If your organization also has a repository named \"public-shared-actions\", this PR may have been opened unintentionally against that name\n>\n> #### How to tell\n>\n> If the Package link/path shows `yourOrg/public-shared-actions/...` (not `Kong/public-shared-actions/...`), it's likely unintended\n>\n> #### What to do\n>\n> Easiest: opt out of this preset:\n>\n> ```json\n> { \"ignorePresets\": [\"Kong/public-shared-renovate//base/github-actions\"] }\n> ```\n> Or override locally to disable the custom manager for your own repo named \"public-shared-actions\"\n"
+        "---\n> [!NOTE]\n> #### Heads-up for repos named \"public-shared-actions\"\n>\n> This preset matches any action path like `*/public-shared-actions/**` and treats it like the Kong/public-shared-actions monorepo (assumes nested sub-actions and a specific tag format). If your organization also has a repository named \"public-shared-actions\", this PR may have been opened unintentionally against that name\n>\n> #### How to tell\n>\n> If the Package link/path shows `yourOrg/public-shared-actions/...` (not `Kong/public-shared-actions/...`), it's likely unintended\n>\n> #### What to do\n>\n> Easiest: opt out of this preset:\n>\n> ```json\n> { \"ignorePresets\": [\"bartsmykla/public-shared-renovate//base/github-actions\"] }\n> ```\n> Or override locally to disable the custom manager for your own repo named \"public-shared-actions\"\n"
       ]
     },
     {

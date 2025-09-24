@@ -8,6 +8,6 @@
     " in your PR and keep entries sorted alphabetically."
   ],
   "extends": [
-    "Kong/public-shared-renovate//security/incidents/github-actions/tj-actions-changed-files"
+    "bartsmykla/public-shared-renovate//security/incidents/github-actions/tj-actions-changed-files"
   ]
 }

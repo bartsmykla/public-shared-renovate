@@ -17,7 +17,7 @@ IFS=$'\n\t'
 
 INCIDENTS_DIR="security/incidents"
 AGGREGATOR_JSON="security/_incidents.json"
-PRESET_PREFIX="Kong/public-shared-renovate//"
+PRESET_PREFIX="bartsmykla/public-shared-renovate//"
 
 print_usage() {
   cat <<USAGE
@@ -102,7 +102,7 @@ strip_json_ext() {
   printf '%s\n' "${p%.json}"
 }
 
-# Example: prefix=Kong/public-shared-renovate// rel=security/incidents/foo
+# Example: prefix=bartsmykla/public-shared-renovate// rel=security/incidents/foo
 preset_id_from_rel_noext() {
   local prefix=$1 rel_no_ext=$2
   printf '%s%s\n' "$prefix" "$rel_no_ext"
