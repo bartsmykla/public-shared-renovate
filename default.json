@@ -35,13 +35,13 @@
     "bartsmykla/public-shared-renovate//base/github-actions",
     "bartsmykla/public-shared-renovate//base/go",
     "bartsmykla/public-shared-renovate//security/base",
-    "bartsmykla/public-shared-renovate//overrides/labels"
+    "bartsmykla/public-shared-renovate//overrides/labels",
+    "bartsmykla/public-shared-renovate//helpers/debug"
   ],
   "automergeStrategy": "squash",
   "assignAutomerge": true,
   "reviewersFromCodeOwners": true,
   "keepUpdatedLabel": "renovate/keep-updated",
-  "minimumReleaseAge": "12 days",
   "prBodyDefinitions": {"Change": "`{{{displayFrom}}}` → `{{{displayTo}}}`"},
   "commitMessageLowerCase": "never",
   "pin": {"commitMessageAction": "pin"},

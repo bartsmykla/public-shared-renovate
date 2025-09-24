@@ -1,0 +1,18 @@
+{
+  "$schema": "https://https://docs.renovatebot.com/renovate-schema.json",
+  "prBodyNotes": [
+    "---",
+    "- depName: `{{{depName}}}`",
+    "- packageName: `{{{packageName}}}`",
+    "- sourceUrl: `{{{sourceUrl}}}`",
+    "- datasource: `{{{datasource}}}`",
+    "- manager: `{{{manager}}}`",
+    "{{#if depType }}- depType: `{{{depType}}}`{{/if}}",
+    "{{#if commitMessagePrefix }}- commitMessagePrefix: `{{{commitMessagePrefix}}}`{{/if}}",
+    "{{#if commitMessageAction }}- commitMessageAction: `{{{commitMessageAction}}}`{{/if}}",
+    "{{#if commitMessageTopic }}- commitMessageTopic: `{{{commitMessageTopic}}}`{{/if}}",
+    "{{#if commitMessageExtra }}- commitMessageExtra: `{{{commitMessageExtra}}}`{{/if}}",
+    "{{#if commitMessageSuffix }}- commitMessageSuffix: `{{{commitMessageSuffix}}}`{{/if}}",
+    "---"
+  ]
+}
