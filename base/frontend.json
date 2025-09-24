@@ -1,0 +1,106 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "npmrcMerge": true,
+  "packageRules": [
+    {
+      "matchCategories": ["js"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "groupName": "all non-major stable"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["@kong{,-ui,-ui-public}/**"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "groupName": "{{{lookup (split packageName '/') 0}}} non-major stable",
+      "groupSlug": "{{{replace '@' (lowercase (lookup (split packageName '/') 0))}}}-non-major-stable",
+      "minimumReleaseAge": "2 hours"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["@kong{,-ui,-ui-public}/**"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "/^0/",
+      "groupName": "{{{lookup (split packageName '/') 0}}} non-major unstable",
+      "groupSlug": "{{{replace '@' (lowercase (lookup (split packageName '/') 0))}}}-non-major-unstable"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": [
+        "@kong-ui-public/analytics-*",
+        "@kong-ui-public/dashboard-renderer",
+        "@kong-ui-public/metric-cards",
+        "@kong-ui/konnect-analytics-bridge",
+        "@kong-ui/timeframe-selector"
+      ],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "konnect analytics non-major",
+      "minimumReleaseAge": "2 hours"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": [
+        "**vite-plugin**",
+        "@vitejs/**",
+        "@vitest/**",
+        "vite",
+        "vitest"
+      ],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "groupName": "vite non-major stable"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "extends": ["monorepo:vue", "monorepo:vueuse"],
+      "groupName": "vue non-major stable"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "extends": ["packages:stylelint"],
+      "groupName": "stylelint non-major stable"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["playwright{,-core}", "@playwright/*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "groupName": "playwright non-major stable"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["cypress{,-*}", "@cypress/*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "groupName": "cypress non-major stable"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "extends": ["packages:eslint"],
+      "groupName": "eslint"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["{@types/,}inquirer"],
+      "enabled": false
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["pnpm"],
+      "matchDepTypes": ["engines"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "enabled": false
+    }
+  ]
+}

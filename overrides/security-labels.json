@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": [
+    " Security-focused label override preset. Applies the shared labels preset to security-related",
+    " updates so Renovate PRs carry consistent labels. It passes through up to five optional labels",
+    " via preset arguments: {{arg0}}, {{arg1}}, {{arg2}}, {{arg3}}, and {{arg4}}; the underlying",
+    " labels preset always include the standard 'dependencies' and 'mend-bot' labels"
+  ],
+  "vulnerabilityAlerts": {
+    "extends": ["Kong/public-shared-renovate//overrides/labels({{{args}}})"]
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": ["*/public-shared-actions/security-actions/**"],
+      "extends": ["Kong/public-shared-renovate//overrides/labels({{{args}}})"]
+    }
+  ]
+}
