@@ -18,10 +18,13 @@
     ":gitSignOff",
     ":labels(dependencies,mend-bot)",
     ":noUnscheduledUpdates",
+    ":semanticCommits",
     ":timezone(America/New_York)",
     "bartsmykla/public-shared-renovate//base/frontend",
+    "bartsmykla/public-shared-renovate//base/github-actions",
     "bartsmykla/public-shared-renovate//helpers/disable-action(Kong/kong-api-tests)",
-    "bartsmykla/public-shared-renovate//helpers/disable-action(the-actions-org/workflow-dispatch)"
+    "bartsmykla/public-shared-renovate//helpers/disable-action(the-actions-org/workflow-dispatch)",
+    "bartsmykla/public-shared-renovate//helpers/debug"
   ],
   "packageRules": [
     {

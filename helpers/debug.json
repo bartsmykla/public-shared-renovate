@@ -8,6 +8,7 @@
     "- datasource: `{{{datasource}}}`",
     "- manager: `{{{manager}}}`",
     "{{#if depType }}- depType: `{{{depType}}}`{{/if}}",
+    "{{#if categories }}- categories: `{{{categories}}}`{{/if}}",
     "{{#if commitMessagePrefix }}- commitMessagePrefix: `{{{commitMessagePrefix}}}`{{/if}}",
     "{{#if commitMessageAction }}- commitMessageAction: `{{{commitMessageAction}}}`{{/if}}",
     "{{#if commitMessageTopic }}- commitMessageTopic: `{{{commitMessageTopic}}}`{{/if}}",

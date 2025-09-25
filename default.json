@@ -11,7 +11,7 @@
     " - Security preset customization examples: ./README.md#security-preset-customization-examples",
     "",
     " Usage:",
-    " - { \"extends\": [\"bartsmykla/public-shared-renovate\"] }",
+    " - { \"extends\": [\"Kong/public-shared-renovate\"] }",
     "",
     " Notes:",
     " - Settings that don't apply to your stack safely no-op",
@@ -26,7 +26,6 @@
     ":automergeStableNonMajor",
     ":disableRateLimiting",
     ":gitSignOff",
-    ":semanticCommits",
     ":semanticCommitTypeAll(chore)",
     "bartsmykla/public-shared-renovate//base/frontend",
     "bartsmykla/public-shared-renovate//base/github-actions",
@@ -58,6 +57,11 @@
       "commitMessageAction": "bump",
       "commitMessageTopic": "{{#if (containsString packageName '/public-shared-actions/')}}{{{packageName}}}{{else}}{{{depName}}}{{/if}}{{#if (and (equals updateType 'digest') (equals currentValue newValue) newValue)}}:{{{newValue}}}{{/if}}",
       "commitMessageExtra": "{{#if (or (and (or isMajor isMinor isPatch) (or isSingleVersion currentDigestShort)) (and (equals updateType 'digest') currentDigestShort))}}from {{#if (equals updateType 'digest')}}{{{currentDigestShort}}}{{else if isSingleVersion}}{{{replace '^v?' 'v' currentValue}}}{{/if}} {{/if}}to {{#if isPinDigest}}{{{newDigestShort}}}{{else if isMajor}}{{prettyNewMajor}}{{else if isSingleVersion}}{{prettyNewVersion}}{{else if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}"
+    },
+    {
+      "matchDatasources": ["go", "maven", "npm", "nuget", "packagist", "pypi", "rubygems"],
+      "matchUpdateTypes": ["patch", "minor", "major"],
+      "prBodyColumns": ["Package", "Type", "Change", "Age", "Adoption"]
     }
   ]
 }
