@@ -86,8 +86,8 @@
     },
     {
       "matchDatasources": ["npm"],
+      "matchPackageNames": ["/eslint/"],
       "matchUpdateTypes": ["minor", "patch"],
-      "extends": ["packages:eslint"],
       "groupName": "eslint"
     },
     {
@@ -96,7 +96,7 @@
       "enabled": false
     },
     {
-      "matchDatasources": ["npm"],
+      "matchCategories": ["js"],
       "matchPackageNames": ["pnpm"],
       "matchDepTypes": ["engines"],
       "matchUpdateTypes": ["minor", "patch"],

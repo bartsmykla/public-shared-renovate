@@ -13,7 +13,6 @@
     " labels, or tweaking cadence), see ../README.md#security-preset-customization-examples"
   ],
   "extends": [
-    "security:openssf-scorecard",
     "bartsmykla/public-shared-renovate//overrides/security-labels(security)",
     "bartsmykla/public-shared-renovate//security/_incidents"
   ],

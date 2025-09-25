@@ -9,18 +9,19 @@
     " the default preset plus local overrides; see PR note for details"
   ],
   "extends": [
-    "bartsmykla/public-shared-renovate",
-    "bartsmykla/public-shared-renovate//helpers/disable-action(Kong/kong-api-tests)",
-    "bartsmykla/public-shared-renovate//helpers/disable-action(the-actions-org/workflow-dispatch)",
     "config:recommended",
     "schedule:automergeWeekdays",
     "schedule:daily",
     ":automergeMinor",
     ":automergePatch",
     ":automergeRequireAllStatusChecks",
+    ":gitSignOff",
     ":labels(dependencies,mend-bot)",
     ":noUnscheduledUpdates",
-    ":timezone(America/New_York)"
+    ":timezone(America/New_York)",
+    "bartsmykla/public-shared-renovate//base/frontend",
+    "bartsmykla/public-shared-renovate//helpers/disable-action(Kong/kong-api-tests)",
+    "bartsmykla/public-shared-renovate//helpers/disable-action(the-actions-org/workflow-dispatch)"
   ],
   "packageRules": [
     {
